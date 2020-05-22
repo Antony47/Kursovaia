@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GuideDai
+namespace GuideDai.Models
 {
     [Serializable]
     public abstract class User

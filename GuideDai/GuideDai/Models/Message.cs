@@ -6,15 +6,19 @@ using System.Threading.Tasks;
 
 namespace GuideDai.Models
 {
+    //
+    // Повідомлення = Текст повідомлення + користувач
+
     [Serializable]
     public class Message
     {
-        public Message(List<string> txtmsg, List<Employee> emp)
+        public Message(string txtmsg, string emp)
         {
             TextMsg = txtmsg;
             Employees = emp;
         }
-        public List<string> TextMsg { get; private set; }
-        public List<Employee> Employees { get; private set; }
+        public Message() { }
+        public string TextMsg { get; set; }
+        public string Employees { get; set; }
     }
 }

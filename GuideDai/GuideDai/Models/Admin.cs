@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GuideDai
+namespace GuideDai.Models
 {
+    //
+    // Адмін = Логін + Пароль
+
     [Serializable]
     public class Admin : User
     {

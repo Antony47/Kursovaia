@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GuideDai
+namespace GuideDai.Models
 {
+    //
+    // Користувач = ПІБ + Пароль + Відділ + Ранг
     [Serializable]
-    public class Employee: User
+    public class Employee : User
     {
         public Employee(string name, string password, string rank, string department) : base(name, password)
         {

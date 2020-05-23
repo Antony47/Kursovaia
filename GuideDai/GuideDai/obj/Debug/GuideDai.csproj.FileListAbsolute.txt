@@ -8,3 +8,4 @@ C:\Users\1\Documents\GitHub\Kursovaia\GuideDai\GuideDai\obj\Debug\GuideDai.cspro
 C:\Users\1\Documents\GitHub\Kursovaia\GuideDai\GuideDai\obj\Debug\GuideDai.csproj.CoreCompileInputs.cache
 C:\Users\1\Documents\GitHub\Kursovaia\GuideDai\GuideDai\obj\Debug\GuideDai.exe
 C:\Users\1\Documents\GitHub\Kursovaia\GuideDai\GuideDai\obj\Debug\GuideDai.pdb
+C:\Users\1\Documents\GitHub\Kursovaia\GuideDai\GuideDai\obj\Debug\GuideDai.Form2.resources

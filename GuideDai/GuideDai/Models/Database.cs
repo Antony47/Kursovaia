@@ -45,6 +45,12 @@ namespace GuideDai.Models
         }
         public void FillMessage() { }
 
+        public void AddInfo(PersonInfo pinfo)
+        {
+            pinfo.NumberRow = PersonInfos.Count + 1;
+            PersonInfos.Add(pinfo);
+        }
+
         public void Save()
         {
             new Dao(this).Save();

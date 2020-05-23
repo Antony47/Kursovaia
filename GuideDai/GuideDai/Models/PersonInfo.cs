@@ -13,8 +13,9 @@ namespace GuideDai.Models
     public class PersonInfo
     {
 
-        public PersonInfo(string pName, string address, string datapasport, string x, string y, string z, string e, string c, string v, string d)
+        public PersonInfo(int numberRow,string pName, string address, string datapasport, string x, string y, string z, string e, string c, string v, string d)
         {
+            NumberRow = numberRow;
             PName = pName;
             Address = address;
             DataPasport = datapasport;
@@ -27,6 +28,7 @@ namespace GuideDai.Models
             DataOfLastControl = d;
         }
         public PersonInfo() { }
+        public int NumberRow { get; set; }
         public string PName { get; set; }
         public string Address { get; set; }
         public string DataPasport { get; set; }

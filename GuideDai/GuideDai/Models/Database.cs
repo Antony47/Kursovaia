@@ -33,7 +33,7 @@ namespace GuideDai.Models
 
         public void FillPersonInfos()
         {
-            PersonInfos.Add(new PersonInfo("garik", "string address", "string datapasport", "sv", "afe", "ave", "vr", "aew", "grew", "wvr"));
+            PersonInfos.Add(new PersonInfo(1, "garik", "string address", "string datapasport", "sv", "afe", "ave", "vr", "aew", "grew", "wvr"));
         }
         public void FillMessage() { }
 

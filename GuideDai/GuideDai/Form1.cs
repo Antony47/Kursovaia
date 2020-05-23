@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GuideDai.Models;
+using GuideDai.DAL;
 
 namespace GuideDai
 {
@@ -15,6 +17,11 @@ namespace GuideDai
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

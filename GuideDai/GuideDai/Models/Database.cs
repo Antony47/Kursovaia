@@ -30,10 +30,18 @@ namespace GuideDai.Models
             Messages = new List<Message>();
         }
 
-
-        public void FillPersonInfos()
+       /* Buyers.Clear();
+            for (int i = 1; i <= n; i++)
+            {
+                Buyers.Add(new Buyer { Name = $"Buer{i}", Password = "123" });
+            }*/
+        public void FillTestData(int n)
         {
-            PersonInfos.Add(new PersonInfo(1, "garik", "string address", "string datapasport", "sv", "afe", "ave", "vr", "aew", "grew", "wvr"));
+            PersonInfos.Clear();
+            for (int i = 1; i <= n; i++)
+            {
+                PersonInfos.Add(new PersonInfo(1, "garik", "string address", "string datapasport", "sv", "afe", "ave", "vr", "aew", "grew", "wvr"));
+            }
         }
         public void FillMessage() { }
 

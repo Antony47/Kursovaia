@@ -1,0 +1,10 @@
+C:\Users\1\Documents\GitHub\Kursovaia\GuideDai\GuideDai\bin\Debug\GuideDai.exe.config
+C:\Users\1\Documents\GitHub\Kursovaia\GuideDai\GuideDai\bin\Debug\GuideDai.exe
+C:\Users\1\Documents\GitHub\Kursovaia\GuideDai\GuideDai\bin\Debug\GuideDai.pdb
+C:\Users\1\Documents\GitHub\Kursovaia\GuideDai\GuideDai\obj\Debug\GuideDai.csprojAssemblyReference.cache
+C:\Users\1\Documents\GitHub\Kursovaia\GuideDai\GuideDai\obj\Debug\GuideDai.Form1.resources
+C:\Users\1\Documents\GitHub\Kursovaia\GuideDai\GuideDai\obj\Debug\GuideDai.Properties.Resources.resources
+C:\Users\1\Documents\GitHub\Kursovaia\GuideDai\GuideDai\obj\Debug\GuideDai.csproj.GenerateResource.cache
+C:\Users\1\Documents\GitHub\Kursovaia\GuideDai\GuideDai\obj\Debug\GuideDai.csproj.CoreCompileInputs.cache
+C:\Users\1\Documents\GitHub\Kursovaia\GuideDai\GuideDai\obj\Debug\GuideDai.exe
+C:\Users\1\Documents\GitHub\Kursovaia\GuideDai\GuideDai\obj\Debug\GuideDai.pdb

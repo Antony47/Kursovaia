@@ -67,6 +67,7 @@
             this.pnameBox.Name = "pnameBox";
             this.pnameBox.Size = new System.Drawing.Size(259, 20);
             this.pnameBox.TabIndex = 1;
+            this.pnameBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // addressBox
             // 
@@ -74,6 +75,7 @@
             this.addressBox.Name = "addressBox";
             this.addressBox.Size = new System.Drawing.Size(259, 20);
             this.addressBox.TabIndex = 2;
+            this.addressBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // datapasportBox
             // 
@@ -81,6 +83,7 @@
             this.datapasportBox.Name = "datapasportBox";
             this.datapasportBox.Size = new System.Drawing.Size(206, 20);
             this.datapasportBox.TabIndex = 3;
+            this.datapasportBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // numberbortBox
             // 
@@ -88,6 +91,7 @@
             this.numberbortBox.Name = "numberbortBox";
             this.numberbortBox.Size = new System.Drawing.Size(206, 20);
             this.numberbortBox.TabIndex = 4;
+            this.numberbortBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // typeBox
             // 
@@ -95,6 +99,7 @@
             this.typeBox.Name = "typeBox";
             this.typeBox.Size = new System.Drawing.Size(206, 20);
             this.typeBox.TabIndex = 5;
+            this.typeBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // colorBox
             // 
@@ -102,6 +107,7 @@
             this.colorBox.Name = "colorBox";
             this.colorBox.Size = new System.Drawing.Size(249, 20);
             this.colorBox.TabIndex = 6;
+            this.colorBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // numberfactoryBox
             // 
@@ -109,6 +115,7 @@
             this.numberfactoryBox.Name = "numberfactoryBox";
             this.numberfactoryBox.Size = new System.Drawing.Size(194, 20);
             this.numberfactoryBox.TabIndex = 9;
+            this.numberfactoryBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // featuresopusBox
             // 
@@ -124,6 +131,7 @@
             this.markaBox.Name = "markaBox";
             this.markaBox.Size = new System.Drawing.Size(249, 20);
             this.markaBox.TabIndex = 11;
+            this.markaBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // label2
             // 
@@ -215,6 +223,7 @@
             // 
             // saveButton
             // 
+            this.saveButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.saveButton.Location = new System.Drawing.Point(224, 275);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(91, 23);
@@ -225,6 +234,7 @@
             // 
             // cancelButton
             // 
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Location = new System.Drawing.Point(11, 275);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(87, 23);
@@ -261,6 +271,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

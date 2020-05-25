@@ -49,8 +49,7 @@ namespace GuideDai
             PersonInfo.NumberFactory = numberfactoryBox.Text;
             PersonInfo.NumberBort = numberbortBox.Text;
             PersonInfo.FeaturesOpus = featuresopusBox.Text;
-            PersonInfo.DataOfLastControl = controldateTimePicker.Text;
-            Close();
+            PersonInfo.DataOfLastControl = Convert.ToString(controldateTimePicker.Value);
         }
 
         
@@ -65,7 +64,7 @@ namespace GuideDai
             RequiredValidate(markaBox, e);
             RequiredValidate(colorBox, e);
             RequiredValidate(numberfactoryBox, e);
-            RequiredValidate(controldateTimePicker, e);
+            RequiredValidate(numberbortBox, e);
         }
 
         private void textBox_TextChanged(object sender, EventArgs e)

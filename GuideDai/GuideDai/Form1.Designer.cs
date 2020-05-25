@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.infoGridView = new System.Windows.Forms.DataGridView();
+            this.personInfosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,7 +42,6 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.personInfosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.databaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,14 +51,15 @@
             this.numberBortDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataOfLastControlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.infoGridView)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.personInfosBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.databaseBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // infoGridView
             // 
-            this.infoGridView.AllowUserToOrderColumns = true;
+            this.infoGridView.AllowUserToAddRows = false;
+            this.infoGridView.AllowUserToDeleteRows = false;
             this.infoGridView.AutoGenerateColumns = false;
             this.infoGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.infoGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -72,8 +73,15 @@
             this.infoGridView.DataSource = this.personInfosBindingSource;
             this.infoGridView.Location = new System.Drawing.Point(12, 42);
             this.infoGridView.Name = "infoGridView";
-            this.infoGridView.Size = new System.Drawing.Size(746, 297);
+            this.infoGridView.ReadOnly = true;
+            this.infoGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.infoGridView.Size = new System.Drawing.Size(776, 396);
             this.infoGridView.TabIndex = 0;
+            // 
+            // personInfosBindingSource
+            // 
+            this.personInfosBindingSource.DataMember = "PersonInfos";
+            this.personInfosBindingSource.DataSource = this.databaseBindingSource;
             // 
             // menuStrip1
             // 
@@ -139,21 +147,21 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.newToolStripMenuItem.Text = "New...";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.editToolStripMenuItem.Text = "Edit...";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -163,56 +171,65 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // personInfosBindingSource
-            // 
-            this.personInfosBindingSource.DataMember = "PersonInfos";
-            this.personInfosBindingSource.DataSource = this.databaseBindingSource;
-            // 
             // databaseBindingSource
             // 
             this.databaseBindingSource.DataSource = typeof(GuideDai.Models.Database);
             // 
             // pNameDataGridViewTextBoxColumn
             // 
+            this.pNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.pNameDataGridViewTextBoxColumn.DataPropertyName = "PName";
             this.pNameDataGridViewTextBoxColumn.HeaderText = "ПІБ";
             this.pNameDataGridViewTextBoxColumn.Name = "pNameDataGridViewTextBoxColumn";
+            this.pNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // addressDataGridViewTextBoxColumn
             // 
+            this.addressDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
             this.addressDataGridViewTextBoxColumn.HeaderText = "Адреса";
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // typeDataGridViewTextBoxColumn
             // 
+            this.typeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
             this.typeDataGridViewTextBoxColumn.HeaderText = "Тип транспорту";
             this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // markaDataGridViewTextBoxColumn
             // 
+            this.markaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.markaDataGridViewTextBoxColumn.DataPropertyName = "Marka";
             this.markaDataGridViewTextBoxColumn.HeaderText = "Марка";
             this.markaDataGridViewTextBoxColumn.Name = "markaDataGridViewTextBoxColumn";
+            this.markaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // colorDataGridViewTextBoxColumn
             // 
+            this.colorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colorDataGridViewTextBoxColumn.DataPropertyName = "Color";
             this.colorDataGridViewTextBoxColumn.HeaderText = "Колір";
             this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
+            this.colorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // numberBortDataGridViewTextBoxColumn
             // 
+            this.numberBortDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.numberBortDataGridViewTextBoxColumn.DataPropertyName = "NumberBort";
             this.numberBortDataGridViewTextBoxColumn.HeaderText = "Бортовий номер";
             this.numberBortDataGridViewTextBoxColumn.Name = "numberBortDataGridViewTextBoxColumn";
+            this.numberBortDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dataOfLastControlDataGridViewTextBoxColumn
             // 
+            this.dataOfLastControlDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataOfLastControlDataGridViewTextBoxColumn.DataPropertyName = "DataOfLastControl";
             this.dataOfLastControlDataGridViewTextBoxColumn.HeaderText = "Дата останнього техогляду";
             this.dataOfLastControlDataGridViewTextBoxColumn.Name = "dataOfLastControlDataGridViewTextBoxColumn";
+            this.dataOfLastControlDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Form1
             // 
@@ -226,9 +243,9 @@
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.infoGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personInfosBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.personInfosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

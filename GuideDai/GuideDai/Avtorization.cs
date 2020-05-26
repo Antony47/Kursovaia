@@ -33,7 +33,7 @@ namespace GuideDai
         }
         private void Avtorization_FormClosed(object sender, FormClosingEventArgs e)
         {
-            Form1.Close();
+            Application.Exit();
         }
     }
 }

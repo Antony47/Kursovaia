@@ -122,5 +122,6 @@ namespace GuideDai
             messageToolStripMenuItem.HideDropDown();
             invitationToolStripMenuItem.HideDropDown();
         }
+
     }
 }

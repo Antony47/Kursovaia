@@ -17,10 +17,11 @@ namespace GuideDai
         Database datab;
         public Form1()
         {
-            
             InitializeComponent();
             datab = new Database();
             personInfosBindingSource.DataSource = datab.PersonInfos;
+            datab.Load();
+            personInfosBindingSource.ResetBindings(false);
         }
 
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)//Загрузка з файлу
@@ -82,7 +83,6 @@ namespace GuideDai
                 personInfosBindingSource.ResetBindings(false);
                 datab.IsDirty = true;
             }
-
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -95,6 +95,11 @@ namespace GuideDai
                 personInfosBindingSource.ResetBindings(false);
                 datab.IsDirty = true;
             }
+        }
+
+        private void invitationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var pf = new Form3();
         }
     }
 }

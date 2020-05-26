@@ -41,8 +41,10 @@
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.invitationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.повідомленняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.databaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +52,8 @@
             this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numberBortDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataOfLastControlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.databaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.пускToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.infoGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personInfosBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -71,11 +75,12 @@
             this.numberBortDataGridViewTextBoxColumn,
             this.dataOfLastControlDataGridViewTextBoxColumn});
             this.infoGridView.DataSource = this.personInfosBindingSource;
-            this.infoGridView.Location = new System.Drawing.Point(12, 42);
+            this.infoGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.infoGridView.Location = new System.Drawing.Point(0, 24);
             this.infoGridView.Name = "infoGridView";
             this.infoGridView.ReadOnly = true;
             this.infoGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.infoGridView.Size = new System.Drawing.Size(776, 396);
+            this.infoGridView.Size = new System.Drawing.Size(800, 426);
             this.infoGridView.TabIndex = 0;
             // 
             // personInfosBindingSource
@@ -88,6 +93,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.tableToolStripMenuItem,
+            this.invitationToolStripMenuItem,
+            this.повідомленняToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -103,8 +110,9 @@
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
+            this.fileToolStripMenuItem.ShowShortcutKeys = false;
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.fileToolStripMenuItem.Text = "Файл";
             // 
             // loadToolStripMenuItem
             // 
@@ -141,45 +149,61 @@
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.tableToolStripMenuItem.Name = "tableToolStripMenuItem";
-            this.tableToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.tableToolStripMenuItem.Text = "Table";
+            this.tableToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.tableToolStripMenuItem.Text = "Таблиця";
             // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.newToolStripMenuItem.Text = "New...";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.newToolStripMenuItem.Text = "Створити";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.editToolStripMenuItem.Text = "Edit...";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.editToolStripMenuItem.Text = "Змінити";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.deleteToolStripMenuItem.Text = "Видалити";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // invitationToolStripMenuItem
+            // 
+            this.invitationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.пускToolStripMenuItem});
+            this.invitationToolStripMenuItem.Name = "invitationToolStripMenuItem";
+            this.invitationToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.invitationToolStripMenuItem.Text = "Запрошення";
+            this.invitationToolStripMenuItem.Click += new System.EventHandler(this.invitationToolStripMenuItem_Click);
+            // 
+            // повідомленняToolStripMenuItem
+            // 
+            this.повідомленняToolStripMenuItem.Name = "повідомленняToolStripMenuItem";
+            this.повідомленняToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
+            this.повідомленняToolStripMenuItem.Text = "Повідомлення";
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.helpToolStripMenuItem.Text = "Допомога";
             // 
-            // databaseBindingSource
+            // contextMenuStrip1
             // 
-            this.databaseBindingSource.DataSource = typeof(GuideDai.Models.Database);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // pNameDataGridViewTextBoxColumn
             // 
             this.pNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.pNameDataGridViewTextBoxColumn.DataPropertyName = "PName";
-            this.pNameDataGridViewTextBoxColumn.HeaderText = "ПІБ";
+            this.pNameDataGridViewTextBoxColumn.HeaderText = "ПІП";
             this.pNameDataGridViewTextBoxColumn.Name = "pNameDataGridViewTextBoxColumn";
             this.pNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -231,6 +255,16 @@
             this.dataOfLastControlDataGridViewTextBoxColumn.Name = "dataOfLastControlDataGridViewTextBoxColumn";
             this.dataOfLastControlDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // databaseBindingSource
+            // 
+            this.databaseBindingSource.DataSource = typeof(GuideDai.Models.Database);
+            // 
+            // пускToolStripMenuItem
+            // 
+            this.пускToolStripMenuItem.Name = "пускToolStripMenuItem";
+            this.пускToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.пускToolStripMenuItem.Text = "пуск";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,6 +302,7 @@
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.DataGridViewTextBoxColumn pNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
@@ -275,6 +310,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numberBortDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataOfLastControlDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripMenuItem invitationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem повідомленняToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem пускToolStripMenuItem;
     }
 }
 

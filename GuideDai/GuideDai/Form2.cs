@@ -17,9 +17,14 @@ namespace GuideDai
         {
             InitializeComponent();
         }
+        public Form2(bool Roll) : this()
+        {
+            RollControl(Roll);
+        }
+        
         public PersonInfo PersonInfo{ set; get; }
 
-        public Form2(PersonInfo pinfo) : this()
+        public Form2(PersonInfo pinfo, bool Roll) : this()
         {
             PersonInfo = pinfo;
             pnameBox.Text = pinfo.PName;
@@ -32,8 +37,38 @@ namespace GuideDai
             numberbortBox.Text = pinfo.NumberBort;
             featuresopusBox.Text = pinfo.FeaturesOpus;
             controldateTimePicker.CustomFormat = pinfo.DataOfLastControl;
+            RollControl(Roll);
         }
 
+        private void RollControl(bool Roll)// если ложь, то запрещаем изменять данные
+        {
+            if (!Roll)
+            {
+                foreach (Control i in Controls)
+                {
+                    if (i is TextBox t)
+                    {
+                        t.ReadOnly = true;
+                    }
+                    if (i is DateTimePicker d)
+                    {
+                        d.Enabled = false;
+                    }
+                    if (i is GroupBox g)
+                    {
+                        foreach (Control j in g.Controls)
+                        {
+                            if (j is TextBox tb)
+                            {
+                                tb.ReadOnly = true;
+
+                            }
+                        }
+                    }
+                }
+                saveButton.Hide();
+            }
+        }
         private void saveButton_Click(object sender, EventArgs e)
         {
             if (PersonInfo == null)

@@ -18,11 +18,18 @@ namespace GuideDai
         public Form1()
         {
             InitializeComponent();
+            this.Visible = false;
+            var pf = new Avtorization(this);
+            pf.ShowDialog();
+
+
             datab = new Database();
             personInfosBindingSource.DataSource = datab.PersonInfos;
             datab.Load();
             personInfosBindingSource.ResetBindings(false);
+            this.BlockForUser();
         }
+        
 
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)//Загрузка з файлу
         {
@@ -77,7 +84,7 @@ namespace GuideDai
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var toEdit = infoGridView.SelectedRows[0].DataBoundItem as PersonInfo;
-            var pf = new Form2(toEdit);
+            var pf = new Form2(toEdit, true);
             if (pf.ShowDialog() == DialogResult.OK)
             {
                 personInfosBindingSource.ResetBindings(false);
@@ -100,6 +107,20 @@ namespace GuideDai
         private void invitationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var pf = new Form3();
+            pf.ShowDialog();
+        }
+
+        private void showInfoButton_Click(object sender, EventArgs e)
+        {
+            var toEdit = infoGridView.SelectedRows[0].DataBoundItem as PersonInfo;
+            var pf = new Form2(toEdit, false);
+            pf.ShowDialog();
+        }
+        private void BlockForUser()
+        {
+            tableToolStripMenuItem.HideDropDown();
+            messageToolStripMenuItem.HideDropDown();
+            invitationToolStripMenuItem.HideDropDown();
         }
     }
 }

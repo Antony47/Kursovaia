@@ -117,18 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="printDocument1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="richTextBox1.Text" xml:space="preserve">
-    <value>	Шановний 
-
-         У зв'язку із закінченням терміну технічного огляду вашого транспортного засобу
- пропонуємо звернутися в сертифікований центр діагностики транспортних засобів, для 
-подальшого огляду та перевірки на справність транспортного засобу. Ми піклуємося
- за безпеку  на дорозі!</value>
-  </data>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>57</value>
-  </metadata>
 </root>

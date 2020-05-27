@@ -42,7 +42,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(127, 9);
+            this.label1.Location = new System.Drawing.Point(109, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 20);
             this.label1.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             // EnterButton
             // 
-            this.EnterButton.Location = new System.Drawing.Point(121, 127);
+            this.EnterButton.Location = new System.Drawing.Point(101, 137);
             this.EnterButton.Name = "EnterButton";
             this.EnterButton.Size = new System.Drawing.Size(131, 46);
             this.EnterButton.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             // RegistrButton
             // 
-            this.RegistrButton.Location = new System.Drawing.Point(131, 179);
+            this.RegistrButton.Location = new System.Drawing.Point(113, 189);
             this.RegistrButton.Name = "RegistrButton";
             this.RegistrButton.Size = new System.Drawing.Size(103, 20);
             this.RegistrButton.TabIndex = 2;
@@ -71,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 47);
+            this.label2.Location = new System.Drawing.Point(32, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 13);
             this.label2.TabIndex = 3;
@@ -80,7 +80,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(41, 85);
+            this.label5.Location = new System.Drawing.Point(32, 86);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 6;
@@ -88,14 +88,14 @@
             // 
             // LoginUserBox
             // 
-            this.LoginUserBox.Location = new System.Drawing.Point(95, 44);
+            this.LoginUserBox.Location = new System.Drawing.Point(86, 45);
             this.LoginUserBox.Name = "LoginUserBox";
             this.LoginUserBox.Size = new System.Drawing.Size(219, 20);
             this.LoginUserBox.TabIndex = 7;
             // 
             // PasswordUserBox
             // 
-            this.PasswordUserBox.Location = new System.Drawing.Point(95, 82);
+            this.PasswordUserBox.Location = new System.Drawing.Point(86, 83);
             this.PasswordUserBox.Name = "PasswordUserBox";
             this.PasswordUserBox.PasswordChar = '*';
             this.PasswordUserBox.Size = new System.Drawing.Size(219, 20);
@@ -105,10 +105,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Red;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(101, 105);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(73, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(186, 15);
+            this.label3.Size = new System.Drawing.Size(208, 16);
             this.label3.TabIndex = 11;
             this.label3.Text = "Неправильний ПІП або пароль";
             this.label3.Visible = false;
@@ -117,7 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 206);
+            this.ClientSize = new System.Drawing.Size(343, 220);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.PasswordUserBox);
             this.Controls.Add(this.LoginUserBox);

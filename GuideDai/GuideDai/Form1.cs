@@ -20,7 +20,7 @@ namespace GuideDai
             InitializeComponent();
             datab = new Database();
             personInfosBindingSource.DataSource = datab.PersonInfos;
-            
+
             datab.Load();
 
             this.Visible = false;
@@ -29,7 +29,8 @@ namespace GuideDai
 
             datab.Load();
             personInfosBindingSource.ResetBindings(false);
-            this.BlockForUser();
+            //this.BlockForUser();
+            datab.Save();
         }
         
 

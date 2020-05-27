@@ -12,3 +12,4 @@ C:\Users\1\Documents\GitHub\Kursovaia\GuideDai\GuideDai\obj\Debug\GuideDai.Form2
 C:\Users\1\Documents\GitHub\Kursovaia\GuideDai\GuideDai\obj\Debug\GuideDai.Form3.resources
 C:\Users\1\Documents\GitHub\Kursovaia\GuideDai\GuideDai\obj\Debug\GuideDai.Avtorization.resources
 C:\Users\1\Documents\GitHub\Kursovaia\GuideDai\GuideDai\obj\Debug\GuideDai.Registration.resources
+C:\Users\1\Documents\GitHub\Kursovaia\GuideDai\GuideDai\obj\Debug\GuideDai.AdminAvtorization.resources

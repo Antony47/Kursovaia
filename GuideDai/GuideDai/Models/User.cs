@@ -9,6 +9,7 @@ namespace GuideDai.Models
     [Serializable]
     public abstract class User
     {
+        public User() { }  
         public User(string name, string password)
         {
             Name = name;

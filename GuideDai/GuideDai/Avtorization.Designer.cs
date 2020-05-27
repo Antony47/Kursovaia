@@ -35,6 +35,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.LoginUserBox = new System.Windows.Forms.TextBox();
             this.PasswordUserBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -96,14 +97,28 @@
             // 
             this.PasswordUserBox.Location = new System.Drawing.Point(95, 82);
             this.PasswordUserBox.Name = "PasswordUserBox";
+            this.PasswordUserBox.PasswordChar = '*';
             this.PasswordUserBox.Size = new System.Drawing.Size(219, 20);
             this.PasswordUserBox.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Red;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(101, 105);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(186, 15);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Неправильний ПІП або пароль";
+            this.label3.Visible = false;
             // 
             // Avtorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(362, 206);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.PasswordUserBox);
             this.Controls.Add(this.LoginUserBox);
             this.Controls.Add(this.label5);
@@ -113,6 +128,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Avtorization";
             this.Text = "Avtorization";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Avtorization_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,5 +143,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox LoginUserBox;
         private System.Windows.Forms.TextBox PasswordUserBox;
+        private System.Windows.Forms.Label label3;
     }
 }

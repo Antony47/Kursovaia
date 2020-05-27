@@ -79,6 +79,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Avtorization.resx">
       <DependentUpon>Avtorization.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +106,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\DataSources\GuideDai.Models.Database.datasource" />
     <None Include="Properties\DataSources\GuideDai.Models.Message.datasource" />
     <None Include="Properties\Settings.settings">

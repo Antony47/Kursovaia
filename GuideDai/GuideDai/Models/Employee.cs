@@ -11,12 +11,13 @@ namespace GuideDai.Models
     [Serializable]
     public class Employee : User
     {
+        public Employee() { }
         public Employee(string name, string password, string rank, string department) : base(name, password)
         {
             Rank = rank;
             Department = department;
         }
-        public string Rank { private set; get; }
-        public string Department { private set; get; }
+        public string Rank { set; get; }
+        public string Department { set; get; }
     }
 }

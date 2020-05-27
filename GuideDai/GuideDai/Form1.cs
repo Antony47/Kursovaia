@@ -18,13 +18,15 @@ namespace GuideDai
         public Form1()
         {
             InitializeComponent();
-            this.Visible = false;
-            var pf = new Avtorization(this);
-            pf.ShowDialog();
-
-
             datab = new Database();
             personInfosBindingSource.DataSource = datab.PersonInfos;
+            
+            datab.Load();
+
+            this.Visible = false;
+            var pf = new Avtorization(datab);
+            pf.ShowDialog();
+
             datab.Load();
             personInfosBindingSource.ResetBindings(false);
             this.BlockForUser();
@@ -118,10 +120,13 @@ namespace GuideDai
         }
         private void BlockForUser()
         {
-            tableToolStripMenuItem.HideDropDown();
-            messageToolStripMenuItem.HideDropDown();
-            invitationToolStripMenuItem.HideDropDown();
+            tableToolStripMenuItem.Enabled = false;
+            invitationToolStripMenuItem.Enabled = false;
         }
 
+        private void personInfoDataGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
     }
 }

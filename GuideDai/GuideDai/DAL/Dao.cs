@@ -38,6 +38,7 @@ namespace GuideDai.DAL
                 Database st = (Database)serializer.Deserialize(stream);
                 Copy(st.PersonInfos, database.PersonInfos);
                 Copy(st.Messages, database.Messages);
+                Copy(st.Employees, database.Employees);
             }
 
             void Copy<T>(List<T> from, List<T> to)

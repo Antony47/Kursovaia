@@ -36,7 +36,7 @@ namespace GuideDai
             numberfactoryBox.Text = pinfo.NumberFactory;
             numberbortBox.Text = pinfo.NumberBort;
             featuresopusBox.Text = pinfo.FeaturesOpus;
-            controldateTimePicker.CustomFormat = pinfo.DataOfLastControl;
+            controldateTimePicker.Value = pinfo.DataOfLastControl;
             RollControl(Roll);
         }
 
@@ -84,7 +84,7 @@ namespace GuideDai
             PersonInfo.NumberFactory = numberfactoryBox.Text;
             PersonInfo.NumberBort = numberbortBox.Text;
             PersonInfo.FeaturesOpus = featuresopusBox.Text;
-            PersonInfo.DataOfLastControl = Convert.ToString(controldateTimePicker.Value);
+            PersonInfo.DataOfLastControl = controldateTimePicker.Value;
         }
 
         

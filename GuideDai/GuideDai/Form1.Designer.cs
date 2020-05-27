@@ -50,7 +50,6 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.invitationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.messageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showInfoButton = new System.Windows.Forms.Button();
@@ -68,6 +67,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.infoGridView.AutoGenerateColumns = false;
+            this.infoGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.infoGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.infoGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.pNameDataGridViewTextBoxColumn,
@@ -81,9 +81,11 @@
             this.infoGridView.Location = new System.Drawing.Point(0, 24);
             this.infoGridView.Name = "infoGridView";
             this.infoGridView.ReadOnly = true;
+            this.infoGridView.RowHeadersVisible = false;
             this.infoGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.infoGridView.Size = new System.Drawing.Size(800, 343);
             this.infoGridView.TabIndex = 0;
+            this.infoGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.personInfoDataGridView_ColumnHeaderMouseClick);
             this.infoGridView.DoubleClick += new System.EventHandler(this.showInfoButton_Click);
             // 
             // pNameDataGridViewTextBoxColumn
@@ -157,7 +159,6 @@
             this.fileToolStripMenuItem,
             this.tableToolStripMenuItem,
             this.invitationToolStripMenuItem,
-            this.messageToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -218,21 +219,21 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.newToolStripMenuItem.Text = "Створити";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.editToolStripMenuItem.Text = "Змінити";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.deleteToolStripMenuItem.Text = "Видалити";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -242,12 +243,6 @@
             this.invitationToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
             this.invitationToolStripMenuItem.Text = "Запрошення";
             this.invitationToolStripMenuItem.Click += new System.EventHandler(this.invitationToolStripMenuItem_Click);
-            // 
-            // messageToolStripMenuItem
-            // 
-            this.messageToolStripMenuItem.Name = "messageToolStripMenuItem";
-            this.messageToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
-            this.messageToolStripMenuItem.Text = "Повідомлення";
             // 
             // helpToolStripMenuItem
             // 
@@ -310,7 +305,6 @@
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem invitationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem messageToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn pNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;

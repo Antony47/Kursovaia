@@ -79,7 +79,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Message.cs" />
     <Compile Include="Models\PersonInfo.cs" />
     <Compile Include="Models\Database.cs" />
     <Compile Include="Program.cs" />

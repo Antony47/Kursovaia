@@ -124,7 +124,6 @@ namespace GuideDai
             tableToolStripMenuItem.Enabled = false;
             invitationToolStripMenuItem.Enabled = false;
         }
-
         private void personInfoDataGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
 

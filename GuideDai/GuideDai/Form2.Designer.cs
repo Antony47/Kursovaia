@@ -50,6 +50,7 @@
             this.controldateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.saveButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
+            this.invitationButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -308,11 +309,22 @@
             this.cancelButton.Text = "Відмінити";
             this.cancelButton.UseVisualStyleBackColor = true;
             // 
+            // invitationButton
+            // 
+            this.invitationButton.Location = new System.Drawing.Point(121, 275);
+            this.invitationButton.Name = "invitationButton";
+            this.invitationButton.Size = new System.Drawing.Size(81, 23);
+            this.invitationButton.TabIndex = 24;
+            this.invitationButton.Text = "Запрошення";
+            this.invitationButton.UseVisualStyleBackColor = true;
+            this.invitationButton.Click += new System.EventHandler(this.invitationButton_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 318);
+            this.Controls.Add(this.invitationButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.controldateTimePicker);
@@ -367,5 +379,6 @@
         private System.Windows.Forms.DateTimePicker controldateTimePicker;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.Button invitationButton;
     }
 }

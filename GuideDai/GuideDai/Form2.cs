@@ -114,5 +114,11 @@ namespace GuideDai
                 e.Cancel = true;
             }
         }
+
+        private void invitationButton_Click(object sender, EventArgs e)
+        {
+            var pf = new Form3(pnameBox.Text, addressBox.Text);
+            pf.ShowDialog();
+        }
     }
 }

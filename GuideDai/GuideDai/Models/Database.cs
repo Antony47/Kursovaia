@@ -15,7 +15,6 @@ namespace GuideDai.Models
     public class Database
     {
         public List<PersonInfo> PersonInfos { private set; get; }
-        public List<Message> Messages { get; private set; }
         public List<Employee> Employees { get; private set; }
         public Admin admin { get; private set; }
 
@@ -29,7 +28,6 @@ namespace GuideDai.Models
         public Database()
         {
             PersonInfos = new List<PersonInfo>();
-            Messages = new List<Message>();
             Employees = new List<Employee>();
             admin = new Admin("", "");
         }
@@ -40,7 +38,6 @@ namespace GuideDai.Models
                 Buyers.Add(new Buyer { Name = $"Buer{i}", Password = "123" });
             }*/
         
-        public void FillMessage() { }
 
         public void AddInfo(PersonInfo pinfo)
         {

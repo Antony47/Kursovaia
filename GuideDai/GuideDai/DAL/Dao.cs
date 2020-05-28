@@ -37,7 +37,6 @@ namespace GuideDai.DAL
                 var serializer = new BinaryFormatter();
                 Database st = (Database)serializer.Deserialize(stream);
                 Copy(st.PersonInfos, database.PersonInfos);
-                Copy(st.Messages, database.Messages);
                 Copy(st.Employees, database.Employees);
             }
 

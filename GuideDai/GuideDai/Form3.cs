@@ -14,17 +14,28 @@ namespace GuideDai
 {
     public partial class Form3 : Form
     {
+
         public Form3()
         {
             InitializeComponent();
         }
+        public Form3(string nameOfPerson, string adressOfPerson)
+        {
+            InitializeComponent();
+            textBox1.Text = nameOfPerson;
+            textBox2.Text = adressOfPerson;
+        }
         private string text;
         private void printButton_Click(object sender, EventArgs e)
         {
-            
             text = "Запрошення на техогляд\n\n";// задаем текст для печати
-
+            text += "	Шановний ";
+            text += textBox1.Text;
+            text += "\n";
             text += richTextBox1.Text;
+            text += "\n\n\n\n";
+            text += "Адреса: ";
+            text += textBox2.Text;
             //////////////////////////////////////////////////////////////////
             PrintDocument printDocument = new PrintDocument();// объект для печати
             

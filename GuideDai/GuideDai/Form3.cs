@@ -51,7 +51,7 @@ namespace GuideDai
         
         void PrintPageHandler(object sender, PrintPageEventArgs e)// обработчик события печати
         {
-            e.Graphics.DrawString(text, new Font("Arial", 12), Brushes.Black, 0, 0);// печать строки result
+            e.Graphics.DrawString(text, new Font("Arial", 14), Brushes.Black, 0, 0);// печать строки result
         }
     }
 }

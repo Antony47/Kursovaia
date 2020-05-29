@@ -12,11 +12,10 @@ namespace GuideDai.Models
     [Serializable]
     public class Admin : User
     {
-        public Admin() { }
-        public Admin(string name, string password) : base(name, password) 
+        public Admin()
         {
             Name = "admin";
-            Password = "4321";
+            Password = "54321";
         }
     }
 }

@@ -61,7 +61,6 @@ namespace GuideDai
                             if (j is TextBox tb)
                             {
                                 tb.ReadOnly = true;
-
                             }
                         }
                     }

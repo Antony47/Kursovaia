@@ -18,6 +18,11 @@ namespace GuideDai
         public Form1()
         {
             InitializeComponent();
+            if(ClientRoll.User == Client.Roll)
+            {
+                BlockForUser();
+            }
+            KeyPreview = true;
             datab = new Database();
             personInfosBindingSource.DataSource = datab.PersonInfos;
 
@@ -29,7 +34,6 @@ namespace GuideDai
 
             datab.Load();
             personInfosBindingSource.ResetBindings(false);
-            //this.BlockForUser();
             datab.Save();
         }
         
@@ -127,6 +131,21 @@ namespace GuideDai
         private void personInfoDataGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
 
+        }
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Insert && e.Control)
+            {
+                var pf = new AdminAvtorization();
+                pf.ShowDialog();
+                if (Client.Roll == ClientRoll.Admin)
+                    OpenAllBlock();
+            }
+        }
+        private void OpenAllBlock()
+        {
+            tableToolStripMenuItem.Enabled = true;
+            invitationToolStripMenuItem.Enabled = true;
         }
     }
 }

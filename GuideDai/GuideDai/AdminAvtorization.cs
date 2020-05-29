@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GuideDai.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,15 @@ namespace GuideDai
         public AdminAvtorization()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(textBox1.Text == "admin" && textBox2.Text == "4321")
+            {
+                Client.Roll = ClientRoll.Admin;
+                this.Close();
+            }
         }
     }
 }

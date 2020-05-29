@@ -29,7 +29,7 @@ namespace GuideDai.Models
         {
             PersonInfos = new List<PersonInfo>();
             Employees = new List<Employee>();
-            admin = new Admin("", "");
+            admin = new Admin();
         }
 
        /* Buyers.Clear();

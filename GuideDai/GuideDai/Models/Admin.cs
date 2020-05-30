@@ -15,7 +15,7 @@ namespace GuideDai.Models
         public Admin()
         {
             Name = "admin";
-            Password = "54321";
+            Password = "12345";
         }
     }
 }

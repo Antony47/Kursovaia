@@ -15,13 +15,13 @@ namespace GuideDai
     {
 
         Database datab;
-        public Avtorization(Database d)
+        public Avtorization(Database d)// передаємо з минулої форми датабейс
         {
             InitializeComponent();
             datab = d;
         }
         
-        private void enterButton_Click(object sender, EventArgs e)
+        private void enterButton_Click(object sender, EventArgs e)// перевірка чи є даний користувач в списку користувачів
         {
             for(int i = 0; i < datab.Employees.Count ;i++)
             {
@@ -32,14 +32,14 @@ namespace GuideDai
             }
             label3.Visible = true;
         }
-        private void registrButton_Click(object sender, EventArgs e)
+        private void registrButton_Click(object sender, EventArgs e)//перехід на реєстрацію
         {
             var pf = new Registration(datab);
             Hide();
             pf.ShowDialog();
         }
 
-        private void Avtorization_FormClosed(object sender, FormClosedEventArgs e)
+        private void Avtorization_FormClosed(object sender, FormClosedEventArgs e)//функція закриття
         {
             Application.Exit();
         }

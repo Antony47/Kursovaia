@@ -18,7 +18,7 @@ namespace GuideDai.Models
         public List<Employee> Employees { get; private set; }
         public Admin admin { get; private set; }
 
-        // If any data changed.
+        // If any data changed. перевірка чи змінювались елементи таблиця
         public bool IsDirty;
 
         public Database(List<PersonInfo> prs)
@@ -32,7 +32,7 @@ namespace GuideDai.Models
             admin = new Admin();
         }
 
-        public void FillTest(int n)
+        public void FillTest(int n)// тестові дані
         {
             PersonInfos = new List<PersonInfo>();
             for (int i = 0; i < n; i++)
@@ -53,18 +53,18 @@ namespace GuideDai.Models
                 PersonInfos.Add(c);
             }
         }
-        public void AddInfo(PersonInfo pinfo)
+        public void AddInfo(PersonInfo pinfo)//додавання нового елементу в список персонинфо
         {
             PersonInfos.Add(pinfo);
         }
 
-        public void Save()
+        public void Save()//збереження
         {
             new Dao(this).Save();
             IsDirty = false;
         }
 
-        public void Load()
+        public void Load()//загрузка
         {
             new Dao(this).Load();
             IsDirty = false;

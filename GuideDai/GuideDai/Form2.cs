@@ -37,10 +37,10 @@ namespace GuideDai
             numberbortBox.Text = pinfo.NumberBort;
             featuresopusBox.Text = pinfo.FeaturesOpus;
             controldateTimePicker.Value = pinfo.DataOfLastControl;
-            RollControl(Roll);
+            RollControl(Roll);//перевірка режиму
         }
 
-        private void RollControl(bool Roll)// если ложь, то запрещаем изменять данные
+        private void RollControl(bool Roll)// якщо брехня, забороняє змінювати дані/ ховає кнопку збереження та запрошення
         {
             if (!Roll)
             {
@@ -70,7 +70,7 @@ namespace GuideDai
                     invitationButton.Hide();
             }
         }
-        private void saveButton_Click(object sender, EventArgs e)
+        private void saveButton_Click(object sender, EventArgs e)//кнопка збереження
         {
             if (PersonInfo == null)
             {
@@ -89,7 +89,7 @@ namespace GuideDai
         }
 
         
-        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)//перевірка на те, чи були заповнені всі важливі поля перед закриттям
         {
             if (DialogResult != DialogResult.OK)
                 return;
@@ -107,7 +107,7 @@ namespace GuideDai
         {
             (sender as Control).BackColor = Color.White;
         }
-        private void RequiredValidate(Control c, FormClosingEventArgs e)
+        private void RequiredValidate(Control c, FormClosingEventArgs e)//зміна заднього кольору
         {
             if (string.IsNullOrWhiteSpace(c.Text))
             {
@@ -116,7 +116,7 @@ namespace GuideDai
             }
         }
 
-        private void invitationButton_Click(object sender, EventArgs e)
+        private void invitationButton_Click(object sender, EventArgs e)//перехід до форми запрошення
         {
             var pf = new Form3(pnameBox.Text, addressBox.Text);
             pf.ShowDialog();

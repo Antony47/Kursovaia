@@ -14,14 +14,14 @@ namespace GuideDai.DAL
     public class Dao
     {
         Database database;
-        const string filePath = "database.bin";
+        const string filePath = "database.bin";//файл в який загружається та вигружається інформація
 
         public Dao(Database database)
         {
             this.database = database;
         }
 
-        public void Save()
+        public void Save()//збереження
         {
             using (Stream stream = File.Create(filePath))
             {
@@ -30,7 +30,7 @@ namespace GuideDai.DAL
             }
         }
 
-        public void Load()
+        public void Load()//завантаження
         {
             using (Stream stream = File.OpenRead(filePath))
             {
@@ -40,7 +40,7 @@ namespace GuideDai.DAL
                 Copy(st.Employees, database.Employees);
             }
 
-            void Copy<T>(List<T> from, List<T> to)
+            void Copy<T>(List<T> from, List<T> to)//копіювання
             {
                 to.Clear();
                 to.AddRange(from);

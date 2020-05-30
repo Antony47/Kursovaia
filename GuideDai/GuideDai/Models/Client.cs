@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GuideDai.Models
 {
-    public static class Client
+    public static class Client//статичний клас з роллю
     {
         public static ClientRoll Roll { get; set; } = ClientRoll.User;
     }

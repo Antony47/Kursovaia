@@ -13,22 +13,22 @@ namespace GuideDai
 {
     public partial class Registration : Form
     {
-        Employee empl;
+        Employee empl;//поле в якому знаходится майбутній користувач
         Database datab;
 
-        public Registration(Database d)
+        public Registration(Database d)//передаємо датаб
         {
             InitializeComponent();
             datab = d;
             empl = new Employee();
         }
 
-        private void Registration_FormClosed(object sender, FormClosedEventArgs e)
+        private void Registration_FormClosed(object sender, FormClosedEventArgs e)// закриття
         {
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)//registration
+        private void button1_Click(object sender, EventArgs e)//реєстрація та збереження
         {
             empl.Name = textBox1.Text;
             empl.Department = textBox2.Text;

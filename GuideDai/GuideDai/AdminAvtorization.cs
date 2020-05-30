@@ -18,7 +18,7 @@ namespace GuideDai
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//перевірка правильності вводу, у разі правильності, зміна ролі на адмін
         {
             if(textBox1.Text == "admin" && textBox2.Text == "12345")
             {

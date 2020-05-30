@@ -14,7 +14,7 @@ namespace GuideDai
     public partial class TableUser : Form
     {
         Database datab;
-        public TableUser(Database d)
+        public TableUser(Database d)//форма з користувачами
         {
             InitializeComponent();
             datab = d;

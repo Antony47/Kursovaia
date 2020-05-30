@@ -15,7 +15,7 @@ namespace GuideDai
         public Help()
         {
             InitializeComponent();
-            richTextBox1.Enabled = false;
+            richTextBox1.Enabled = false;//заблоковано  зміну тексту, тут я звертаюсь до користувачів (але не до адміна)-> для нього інструкція в курсовій
         }
     }
 }

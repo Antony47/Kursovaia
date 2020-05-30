@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace GuideDai.Models
 {
     [Serializable]
-    public abstract class User
+    public abstract class User// абстрактний клас юзер з спільними полями юзера та адміна
     {
         public User() { }  
         public User(string name, string password)

@@ -32,13 +32,27 @@ namespace GuideDai.Models
             admin = new Admin();
         }
 
-       /* Buyers.Clear();
-            for (int i = 1; i <= n; i++)
+        public void FillTest(int n)
+        {
+            PersonInfos = new List<PersonInfo>();
+            for (int i = 0; i < n; i++)
             {
-                Buyers.Add(new Buyer { Name = $"Buer{i}", Password = "123" });
-            }*/
-        
-
+                var c = new PersonInfo()
+                {
+                    PName = $"Людина{i}",
+                    Address = $"Адреса{i}",
+                    DataPasport = $"Datapasport{i}",
+                    Type = $"Тип{i}",
+                    Marka = $"Марка{i}",
+                    Color = $"Колір{i}",
+                    NumberFactory = $"Заводський{i}{i + 1}{i + 2}{i + 3}",
+                    NumberBort = $"Бортовий{i}",
+                    FeaturesOpus = $"Повна комлектація",
+                    DataOfLastControl = DateTime.Now - TimeSpan.FromDays(i * 365)
+                };
+                PersonInfos.Add(c);
+            }
+        }
         public void AddInfo(PersonInfo pinfo)
         {
             PersonInfos.Add(pinfo);

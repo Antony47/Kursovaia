@@ -31,8 +31,9 @@ namespace GuideDai
             this.Visible = false;
             var pf = new Avtorization(datab);
             pf.ShowDialog();
-
+           // datab.FillTest(20);
             datab.Load();
+            
             personInfosBindingSource.ResetBindings(false);
             datab.Save();
         }
@@ -128,10 +129,6 @@ namespace GuideDai
             tableToolStripMenuItem.Enabled = false;
             invitationToolStripMenuItem.Enabled = false;
         }
-        private void personInfoDataGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-
-        }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Insert && e.Control)
@@ -146,6 +143,57 @@ namespace GuideDai
         {
             tableToolStripMenuItem.Enabled = true;
             invitationToolStripMenuItem.Enabled = true;
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)/// кнопка "Допомога"
+        {
+            var pf = new Help();
+            pf.ShowDialog();
+        }
+
+        private void searchInfoBox_TextChanged(object sender, EventArgs e)//для искания в таблице 
+        {
+            if (string.IsNullOrWhiteSpace(PoshukBox.Text))
+            {
+                personInfosBindingSource.DataSource = datab.PersonInfos;
+                personInfosBindingSource.ResetBindings(false);
+            }
+            else
+            {
+                switch (ParametrComboBox.Text)
+                {
+                    case "ПІП":
+                        personInfosBindingSource.DataSource = datab.PersonInfos.Where(o => o.PName.StartsWith(PoshukBox.Text)).ToList();
+                        personInfosBindingSource.ResetBindings(false);
+                        break;
+                    case "Адреса":
+                        personInfosBindingSource.DataSource = datab.PersonInfos.Where(o => o.Address.StartsWith(PoshukBox.Text)).ToList();
+                        personInfosBindingSource.ResetBindings(false);
+                        break;
+                    case "Тип транспорту":
+                        personInfosBindingSource.DataSource = datab.PersonInfos.Where(o => o.Type.StartsWith(PoshukBox.Text)).ToList();
+                        personInfosBindingSource.ResetBindings(false);
+                        break;
+                    case "Марка":
+                        personInfosBindingSource.DataSource = datab.PersonInfos.Where(o => o.Marka.StartsWith(PoshukBox.Text)).ToList();
+                        personInfosBindingSource.ResetBindings(false);
+                        break;
+                    case "Колір":
+                        personInfosBindingSource.DataSource = datab.PersonInfos.Where(o => o.Color.StartsWith(PoshukBox.Text)).ToList();
+                        personInfosBindingSource.ResetBindings(false);
+                        break;
+                    case "Бортовий номер":
+                        personInfosBindingSource.DataSource = datab.PersonInfos.Where(o => o.NumberBort.StartsWith(PoshukBox.Text)).ToList();
+                        personInfosBindingSource.ResetBindings(false);
+                        break;
+                }
+            }
+        }
+
+        private void TableForUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var tu = new TableUser(datab);
+            tu.Show();
         }
     }
 }

@@ -66,6 +66,8 @@ namespace GuideDai
                     }
                 }
                 saveButton.Hide();
+                if (Client.Roll != ClientRoll.Admin)
+                    invitationButton.Hide();
             }
         }
         private void saveButton_Click(object sender, EventArgs e)

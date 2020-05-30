@@ -306,7 +306,7 @@
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(87, 23);
             this.cancelButton.TabIndex = 23;
-            this.cancelButton.Text = "Відмінити";
+            this.cancelButton.Text = "Назад";
             this.cancelButton.UseVisualStyleBackColor = true;
             // 
             // invitationButton
@@ -348,7 +348,7 @@
             this.Controls.Add(this.pnameBox);
             this.Controls.Add(this.label1);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Детальна інформація";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();

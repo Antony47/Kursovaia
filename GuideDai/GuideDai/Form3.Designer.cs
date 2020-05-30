@@ -137,7 +137,7 @@
             this.Controls.Add(this.printButton);
             this.Controls.Add(this.richTextBox1);
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.Text = "Запрошення";
             this.ResumeLayout(false);
             this.PerformLayout();
 

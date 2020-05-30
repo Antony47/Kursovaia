@@ -103,6 +103,9 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Red;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -127,7 +130,7 @@
             this.Controls.Add(this.EnterButton);
             this.Controls.Add(this.label1);
             this.Name = "Avtorization";
-            this.Text = "Avtorization";
+            this.Text = "Авторизація";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Avtorization_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

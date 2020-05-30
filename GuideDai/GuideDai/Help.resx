@@ -117,25 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="personInfosBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>199, 19</value>
-  </metadata>
-  <metadata name="personInfosBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>199, 19</value>
-  </metadata>
-  <metadata name="databaseBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="databaseBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>392, 17</value>
-  </metadata>
-  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>507, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>56</value>
-  </metadata>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>	Після правильного введення полів на формі авторизації чи при реєстрації у нас відкривається головне вікно. На ньому ми бачимо меню швидкого доступу, таблицю з заповненою інформацією про транспортні засоби, кнопку «Детальніше», шаблон з параметрами та поле для пошуку. Меню швидкого доступу складається з розділів: «Файл», «Таблиця» (заблоковано), «Запрошення»(заблоковано) та «Допомога». У розділі «Файл» знаходяться: кнопка «Завантажити», що допоможе завантажити останні збережені дані в таблицю у разі технічних проблем, якщо такі виникнуть, кнопка «Зберегти», що зберігає всю інформацію таблиці  на даний момент часу, .</value>
+  </data>
 </root>

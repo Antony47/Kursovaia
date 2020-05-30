@@ -70,6 +70,12 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Admin.cs" />
     <Compile Include="DAL\Dao.cs" />
     <Compile Include="Models\Client.cs" />
@@ -92,6 +98,12 @@
     <Compile Include="Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <Compile Include="TableUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableUser.Designer.cs">
+      <DependentUpon>TableUser.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminAvtorization.resx">
       <DependentUpon>AdminAvtorization.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +119,9 @@
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -118,6 +133,9 @@
     </Compile>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableUser.resx">
+      <DependentUpon>TableUser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\GuideDai.Models.Database.datasource" />
     <None Include="Properties\DataSources\GuideDai.Models.Message.datasource" />
